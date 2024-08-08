@@ -1,0 +1,7 @@
+{
+  "name": "online-chat-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
