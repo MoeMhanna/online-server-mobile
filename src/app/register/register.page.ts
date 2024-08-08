@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-tab2',
+  selector: 'app-chats-page',
   templateUrl: 'register.page.html',
   styleUrls: ['register.page.scss']
 })

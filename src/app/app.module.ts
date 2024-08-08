@@ -22,7 +22,7 @@ export const tokenGetter = () => {
 		IonicModule.forRoot(),
 		AppRoutingModule,
 		JwtModule.forRoot({config: {tokenGetter}}),
-		ToastrModule.forRoot(),
+		ToastrModule.forRoot()
 	],
 	providers: [
 		provideHttpClient(withInterceptorsFromDi()),

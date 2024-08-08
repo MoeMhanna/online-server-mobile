@@ -1,40 +1,74 @@
-.login-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 20px;
-  background-color: #f4f4f9;
+// Variables for classic colors
+$secondary-color: #b0b0b5; // Light Gray
+$background-color: #f4f4f9; // Light Background
+$input-background-color: #ffffff; // White Input Background
+$input-border-color: #d1d1d6; // Light Border for Inputs
+$button-hover-color: #2c3e50; // Darker Blue for Hover
 
-  ion-item {
-    margin-bottom: 20px;
-    --background: #ffffff;
+ion-header {
+  --background: #34495e;
+  --color: #ffffff;
+
+  ion-toolbar {
+    --background: transparent;
     --border-color: #b0b0b5;
-    --ion-color-primary: #34495e; // Dark Blue
 
-    ion-label {
-      color: #34495e;
-      font-weight: 500;
-    }
-
-    ion-input {
-      --color: #34495e;
+    ion-title {
+      font-weight: 600;
+      color: #ffffff;
+      font-size: 1.5rem; // Slightly larger for a modern feel
     }
   }
+}
 
-  .login-button {
-    --background: #34495e; // Dark Blue
-    --color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ion-content {
+  --background: #f4f4f9;
+  --color: #2c3e50;
 
-    &:hover {
-      --background: #2c3e50;
+  form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    ion-item {
+      margin-bottom: 20px;
+      --background: #ffffff;
+      --border-color: #d1d1d6;
+      --border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); // Subtle shadow for depth
+      --ion-color-primary: #34495e;
+
+      ion-label {
+        color: #34495e;
+        font-weight: 500;
+        font-size: 1rem; // Uniform text size for labels
+      }
+
+      ion-input {
+        --color: #34495e;
+        font-size: 1rem; // Uniform text size for inputs
+        padding: 10px; // Increased padding for a more spacious feel
+      }
     }
 
-    &:disabled {
-      --background: #b0b0b5;
-      --color: #e0e0e5;
+    .login-button {
+      --background: #34495e;
+      --color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Slightly stronger shadow for buttons
+      font-size: 1.1rem; // Larger button text for emphasis
+      padding: 12px; // More padding for a comfortable click area
+
+      &:hover {
+        --background: #2c3e50;
+      }
+
+      &:disabled {
+        --background: #b0b0b5;
+        --color: #e0e0e5;
+      }
     }
   }
 }

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { TokenService } from '../token/token.service';
-import { LoginService } from '../login/services/login.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
