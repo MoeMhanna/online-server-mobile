@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TokenService } from '../token/token.service';
@@ -11,12 +11,11 @@ import { LoginService } from './services/login.service';
 	templateUrl: 'login.page.html',
 	styleUrls: ['login.page.scss']
 })
-export class LoginPage implements OnInit, OnDestroy {
+export class LoginPage implements OnInit {
 	public loginForm: FormGroup;
 
 	constructor(private router: Router,
 	            private tokenService: TokenService,
-	            private toastrService: ToastrService,
 	            private loginService: LoginService,
 	            protected changeDetectorRef: ChangeDetectorRef) {
 		this.loginForm = new FormGroup({
@@ -25,8 +24,7 @@ export class LoginPage implements OnInit, OnDestroy {
 		});
 	}
 
-	ngOnDestroy(): void {
-	}
+
 
 	ngOnInit(): void {
 		this.tokenService.$authenticationSubject.next(null);

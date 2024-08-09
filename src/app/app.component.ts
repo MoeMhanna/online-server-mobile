@@ -19,6 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		this.authenticationSubscription();
+		this.tokenService.$authenticationSubject.next(null);
 	}
 
 	protected authenticationSubscription() {
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
 			.subscribe({
 				next: async () => {
 					this.isAuthenticated = this.tokenService.isAuthenticated;
-					if (!this.isAuthenticated) {
+						if (!this.isAuthenticated) {
 						return await this.router.navigate(['/login']);
 					}
 					if (this.subscription$.closed) {
